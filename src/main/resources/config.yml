@@ -1,0 +1,7 @@
+act:
+  # Enable or disable the plugin (boolean)
+  enable: true
+
+farming_tweaks:
+  # Enable or disable all the farming tweaks
+  enable: true

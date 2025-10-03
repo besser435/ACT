@@ -1,6 +1,8 @@
-name: ACT
+name: AtlasCivsTools
+prefix: ACT
 version: '1.0.0'
 main: me.besser.ACT
 api-version: '1.21'
 authors: [ besser ]
 description: AtlasCivs Tools Plugin
+website: https://github.com/besser435/AtlasCivs-Tools
