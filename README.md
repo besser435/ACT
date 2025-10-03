@@ -1,2 +1,3 @@
-# ACT
-A plugin to help manage miscellaneous AtlasCivs functions. 
+# AtlasCivs-Tools
+A plugin to help manage miscellaneous AtlasCivs functions.
+
