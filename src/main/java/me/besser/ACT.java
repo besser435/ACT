@@ -2,6 +2,7 @@ package me.besser;
 
 import me.besser.FarmingTweaks.AutoReplantCrops;
 import me.besser.FarmingTweaks.NoTrampleCrops;
+import me.besser.MovementTweaks.PathSpeedBoost;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -9,6 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import static me.besser.BesserLogger.*;
 
 public final class ACT extends JavaPlugin implements Listener {
+    private PathSpeedBoost pathSpeedBoost;
 
     @Override
     public void onEnable() {
@@ -26,6 +28,7 @@ public final class ACT extends JavaPlugin implements Listener {
         // Configs
         FileConfiguration config = this.getConfig();
         boolean enableFarmingTweaks = config.getBoolean("farming_tweaks.enable", true);
+        boolean enableMovementTweaks = config.getBoolean("movement_tweaks.enable", true);
 
         // Farming improvements
         if (enableFarmingTweaks) {
@@ -37,12 +40,23 @@ public final class ACT extends JavaPlugin implements Listener {
             log(INFO, "ACT Farming Tweaks enabled");
         }
 
+        // Movement tweaks
+        if (enableMovementTweaks) {
+            pathSpeedBoost = new PathSpeedBoost(this);
+            pathSpeedBoost.start(this);
+        }
+
 
         log(INFO, "ACT v" + getPluginMeta().getVersion() + " started!");
     }
 
     @Override
     public void onDisable() {
+        // Cleanup
+        if (pathSpeedBoost != null) {
+            pathSpeedBoost.stop();
+        }
+
         log(INFO, "ACT v" + getPluginMeta().getVersion() + " stopped!");
     }
 }

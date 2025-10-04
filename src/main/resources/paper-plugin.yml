@@ -1,6 +1,6 @@
 name: AtlasCivsTools
 prefix: ACT
-version: '1.0.0'
+version: ${project.version}
 main: me.besser.ACT
 api-version: '1.21'
 authors: [ besser ]

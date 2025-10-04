@@ -1,7 +1,17 @@
 act:
-  # Enable or disable the plugin (boolean)
+  # Enable or disable the plugin
   enable: true
 
 farming_tweaks:
   # Enable or disable all the farming tweaks
   enable: true
+
+movement_tweaks:
+  # Enable or disable all the movement tweaks
+  enable: true
+
+  path_speed_boost:
+    # What Bukkit Material to be used to apply the effect
+    block: DIRT_PATH
+    # What Speed level to use. Default is 1 for Speed I
+    speed_level: 1
