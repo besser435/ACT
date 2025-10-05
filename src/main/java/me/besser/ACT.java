@@ -1,6 +1,7 @@
 package me.besser;
 
 import me.besser.FarmingTweaks.AutoReplantCrops;
+import me.besser.FarmingTweaks.CropXP;
 import me.besser.FarmingTweaks.NoTrampleCrops;
 import me.besser.MovementTweaks.PathSpeedBoost;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -34,8 +35,10 @@ public final class ACT extends JavaPlugin implements Listener {
         if (enableFarmingTweaks) {
             AutoReplantCrops replantCrops = new AutoReplantCrops();
             NoTrampleCrops noTrampleCrops = new NoTrampleCrops();
+            CropXP cropXP = new CropXP(this);
             getServer().getPluginManager().registerEvents(replantCrops, this);
             getServer().getPluginManager().registerEvents(noTrampleCrops, this);
+            getServer().getPluginManager().registerEvents(cropXP, this);
 
             log(INFO, "ACT Farming Tweaks enabled");
         }
@@ -44,6 +47,8 @@ public final class ACT extends JavaPlugin implements Listener {
         if (enableMovementTweaks) {
             pathSpeedBoost = new PathSpeedBoost(this);
             pathSpeedBoost.start(this);
+
+            log(INFO, "ACT Movement Tweaks enabled");
         }
 
 

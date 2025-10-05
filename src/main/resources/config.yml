@@ -5,6 +5,7 @@ act:
 farming_tweaks:
   # Enable or disable all the farming tweaks
   enable: true
+  crop_xp: 5
 
 movement_tweaks:
   # Enable or disable all the movement tweaks
@@ -13,5 +14,5 @@ movement_tweaks:
   path_speed_boost:
     # What Bukkit Material to be used to apply the effect
     block: DIRT_PATH
-    # What Speed level to use. Default is 1 for Speed I
+    # What Speed level to use. Default is 1 for Speed I. Min of 1, Max of 10.
     speed_level: 1

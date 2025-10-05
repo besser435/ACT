@@ -59,7 +59,7 @@ public class PathSpeedBoost {
                             PotionEffectType.SPEED,
                             40,
                             speedAmplifier,
-                            false,   // No ambient particles
+                            false,  // No ambient particles
                             false           // No particles
                     ));
                 }
