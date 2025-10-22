@@ -16,7 +16,7 @@ public final class ACT extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         BesserLogger.initialize(this);
-        saveResource("config.yml", false);
+        saveDefaultConfig();
 
         // Check if enabled
         boolean isEnabledInConfig = getConfig().getBoolean("act.enable", true);

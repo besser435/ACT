@@ -5,7 +5,16 @@ act:
 farming_tweaks:
   # Enable or disable all the farming tweaks
   enable: true
+  # How much XP each XP crop will drop
   crop_xp: 5
+  # Crops that will drop XP up harvest when fully grown. Must be of Bukkit Ageable type.
+  xp_crops:
+    - WHEAT
+    - CARROTS
+    - POTATOES
+    - BEETROOTS
+    - NETHER_WART
+    - COCOA
 
 movement_tweaks:
   # Enable or disable all the movement tweaks
